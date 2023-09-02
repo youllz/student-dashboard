@@ -11,6 +11,5 @@ export default defineConfig({
 				noExternal: process.env.NODE_ENV === 'production' ? ['@carbon/charts'] : []
 			}
 		}
-	},
-	
+	}
 });
