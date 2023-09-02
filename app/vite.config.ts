@@ -7,7 +7,8 @@ export default defineConfig({
 	css: {
 		preprocessorOptions: {
 			scss: {
-				additionalData: '@use "src/variables.scss" as *;'
+				additionalData: '@use "src/variables.scss" as *;',
+				noExternal: process.env.NODE_ENV === 'production' ? ['@carbon/charts'] : []
 			}
 		}
 	},
